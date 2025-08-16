@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-const HomeTabScreen = () => {
+const BusTabScreen = () => {
 	return (
 		<View>
-			<Text>Home</Text>
+			<Text>Bus</Text>
 		</View>
 	);
 };
 
-export default HomeTabScreen;
+export default BusTabScreen;
