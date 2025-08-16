@@ -46,7 +46,7 @@ const BusTabScreen = () => {
 		if (!data?.data) return [];
 		if (!searchQuery.trim()) return data.data;
 
-		return data.data.filter((route) =>
+		return data.data.filter((route: KMBRoute) =>
 			route.route.toLowerCase().includes(searchQuery.toLowerCase())
 		);
 	}, [data?.data, searchQuery]);
@@ -218,7 +218,7 @@ const BusTabScreen = () => {
 			<Box flex={1} className="pt-2">
 				<FlatList
 					refreshing={loading}
-					// onRefresh={refetch}
+					onRefresh={refetch}
 					data={filteredRoutes}
 					renderItem={renderRouteItem}
 					keyExtractor={(item, index) => `${item.route}-${item.bound}-${index}`}
