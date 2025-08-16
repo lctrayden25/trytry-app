@@ -1,12 +1,20 @@
+import { config } from "@gluestack-ui/config";
+import { GluestackUIProvider } from "@gluestack-ui/themed";
 import { Stack } from "expo-router";
 
 import "@/global.css";
-import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 
 export default function RootLayout() {
 	return (
-        <GluestackUIProvider mode="light"><Stack>
-                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            </Stack></GluestackUIProvider>
-    );
+		<GluestackUIProvider config={config}>
+			<Stack>
+				<Stack.Screen
+					name="(tabs)"
+					options={{
+						headerShown: false,
+					}}
+				/>
+			</Stack>
+		</GluestackUIProvider>
+	);
 }

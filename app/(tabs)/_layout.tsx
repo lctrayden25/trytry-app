@@ -3,23 +3,36 @@ import React from "react";
 
 const TabLayout = () => {
 	return (
-		<Tabs screenOptions={{ tabBarActiveTintColor: "blue" }}>
+		<Tabs
+			screenOptions={{
+				headerStyle: {
+					backgroundColor: "#e7305b", // Your desired color
+				},
+				tabBarStyle: {
+					backgroundColor: "#e7305b",
+					borderRadius: 40,
+					marginHorizontal: 20,
+					marginBottom: 40,
+					height: 70,
+					paddingBottom: 30,
+					paddingTop: 10,
+					position: "absolute",
+					boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
+				},
+				tabBarActiveTintColor: "white",
+				tabBarInactiveTintColor: "black",
+			}}
+		>
 			<Tabs.Screen
 				name="index"
 				options={{
-					title: "Home",
-					// tabBarIcon: ({ color }) => (
-					// 	<FontAwesome size={28} name="home" color={color} />
-					// ),
+					title: "常用路線",
 				}}
 			/>
 			<Tabs.Screen
 				name="bus"
 				options={{
-					title: "Bus",
-					// tabBarIcon: ({ color }) => (
-					// 	<FontAwesome size={28} name="home" color={color} />
-					// ),
+					title: "九巴列表",
 				}}
 			/>
 		</Tabs>
