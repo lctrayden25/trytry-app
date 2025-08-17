@@ -14,6 +14,13 @@ export default function RootLayout() {
 						headerShown: false,
 					}}
 				/>
+				<Stack.Screen
+					name="bus-detail/[id]"
+					options={{
+						headerShown: false,
+						presentation: "modal",
+					}}
+				/>
 			</Stack>
 		</GluestackUIProvider>
 	);

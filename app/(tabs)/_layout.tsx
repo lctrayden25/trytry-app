@@ -30,7 +30,7 @@ const TabLayout = () => {
 				}}
 			/>
 			<Tabs.Screen
-				name="bus"
+				name="bus-list/index"
 				options={{
 					title: "九巴列表",
 				}}
